@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+    db:
+        image: mcr.microsoft.com/mssql/server:latest
+        container_name: mssql-bakery
+        environment:
+            ACCEPT_EULA: 'Y'
+            SA_PASSWORD: 'yourStrong(!)Password'
+        ports:
+            - 1433:1433
+        restart: always
+        volumes:
+            - ./data/sqlserver:/var/opt/sqlserver
+            - ./data/mssql:/var/opt/mssql

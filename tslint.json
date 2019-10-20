@@ -1,0 +1,50 @@
+{
+	"defaultSeverity": "warning",
+	"rulesDirectory": ["node_modules/tslint-microsoft-contrib"],
+	"extends": ["tslint:recommended", "tslint-microsoft-contrib/recommended"],
+	"linterOptions": {
+		"exclude": ["node_modules/**"]
+	},
+	"rules": {
+		"quotemark": [true, "single"],
+		"indent": [true, "tabs", 4],
+		"interface-name": false,
+		"ordered-imports": false,
+		"object-literal-sort-keys": false,
+		"no-consecutive-blank-lines": false,
+		"no-relative-imports": true,
+		"no-var-keyword": true,
+		"class-name": true,
+		"import-name": [false],
+		"export-name": false,
+		"no-backbone-get-set-outside-model": false,
+		"function-name": false,
+		"no-shadowed-variable": false,
+		"variable-name": false,
+		"no-useless-files": false,
+		"arrow-parens": false,
+		"ban": [
+			true,
+			{
+				"name": ["localStorage", "setItem"],
+				"message": "Use SecureStorage instead by importing  with `import SecureStorage from '@/utils/secure-storage'`"
+			},
+			{
+				"name": ["localStorage", "getItem"],
+				"message": "Use SecureStorage instead by importing  with `import SecureStorage from '@/utils/secure-storage'`"
+			},
+			{
+				"name": ["localStorage", "clear"],
+				"message": "Use SecureStorage instead by importing  with `import SecureStorage from '@/utils/secure-storage'`"
+			},
+			{
+				"name": ["localStorage", "removeItem"],
+				"message": "Use SecureStorage instead by importing  with `import SecureStorage from '@/utils/secure-storage'`"
+			},
+			{
+				"name": ["localStorage", "key"],
+				"message": "Use SecureStorage instead by importing  with `import SecureStorage from '@/utils/secure-storage'`"
+			}
+		]
+	}
+}
