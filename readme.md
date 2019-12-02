@@ -1,74 +1,117 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+# Laravel + Vue + TypeScript Starte Project (MPA)
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+> Start project template of full stack web development
 
-## About Laravel
+## Demo
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+> Screenshots of a demo application that uses this template
 
--   [Simple, fast routing engine](https://laravel.com/docs/routing).
--   [Powerful dependency injection container](https://laravel.com/docs/container).
--   Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
--   Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
--   Database agnostic [schema migrations](https://laravel.com/docs/migrations).
--   [Robust background job processing](https://laravel.com/docs/queues).
--   [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+The live demo can be found [here](http://addb-bakery.herokuapp.com)
+The repo for the demo can be found [here](https://github.com/chinloyal/addb-bakery)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+![Splash Page Screenshot](https://i.imgur.com/NLvWg5Y.png)
+![Login Page Screenshot](https://i.imgur.com/o24XaE4.png)
+![Login GIF](https://i.imgur.com/zARWtD4.png)
 
-## Learning Laravel
+## Features
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+-   Laravel 6.0
+-   Vue.js 2.5
+-   TypeScript
+-   Vuetify (Material Design)
+-   Reusable dialog
+-   NProgress on axios request
+-   Git Hooks
+-   Vuex (with secure storage)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Installation
 
-## Laravel Sponsors
+> With composer
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+```bash
+$ composer create-project --prefer-dist chinloyal/lavuet ProjectName
+$ cd ProjectName
+$ npm install
+```
 
--   **[Vehikl](https://vehikl.com/)**
--   **[Tighten Co.](https://tighten.co)**
--   **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
--   **[64 Robots](https://64robots.com)**
--   **[Cubet Techno Labs](https://cubettech.com)**
--   **[Cyber-Duck](https://cyber-duck.co.uk)**
--   **[British Software Development](https://www.britishsoftware.co)**
--   **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
--   **[DevSquad](https://devsquad.com)**
--   [UserInsights](https://userinsights.com)
--   [Fragrantica](https://www.fragrantica.com)
--   [SOFTonSOFA](https://softonsofa.com/)
--   [User10](https://user10.com)
--   [Soumettre.fr](https://soumettre.fr/)
--   [CodeBrisk](https://codebrisk.com)
--   [1Forge](https://1forge.com)
--   [TECPRESSO](https://tecpresso.co.jp/)
--   [Runtime Converter](http://runtimeconverter.com/)
--   [WebL'Agence](https://weblagence.com/)
--   [Invoice Ninja](https://www.invoiceninja.com)
--   [iMi digital](https://www.imi-digital.de/)
--   [Earthlink](https://www.earthlink.ro/)
--   [Steadfast Collective](https://steadfastcollective.com/)
--   [We Are The Robots Inc.](https://watr.mx/)
--   [Understand.io](https://www.understand.io/)
--   [Abdel Elrafa](https://abdelelrafa.com)
--   [Hyper Host](https://hyper.host)
--   [Appoly](https://www.appoly.co.uk)
--   [OP.GG](https://op.gg)
+> From github
 
-## Contributing
+```bash
+$ git clone https://github.com/chinloyal/lavuet.git ProjectName
+$ cd ProjectName
+$ composer install
+$ npm install
+$ cp .env.example .env
+$ php artisan key:generate
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Usage
 
-## Security Vulnerabilities
+### Development
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+$ npm run watch # build and watch
+$ npm run hot # serve with hot reload
+```
 
-## License
+### Production
 
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+$ npm run prod
+```
+
+### App Dialog
+
+Firstly include the AppDialog component in your main layout blade file.
+Now you can use the dialog from any component by accessing `$dialog` on your vue instance.
+
+> Example
+
+```ts
+// Snippet of code
+deleteItem() {
+    this.$dialog.show({
+        title: 'Confirm Delete',
+        message: 'Are you sure you want to delete this item?',
+        showCancelBtn: true,
+        onConfirm() {
+            // Delete item
+        }
+    })
+}
+```
+
+Available Options on the app dialog
+
+```
+showCancelBtn?: boolean;
+cancelBtnText?: string;
+okBtnText?: string;
+title: string;
+message: string;
+visible?: boolean;
+dialogType?: string;
+onConfirm?: Function;
+```
+
+'?' Means optional
+
+### Secure Storage
+
+If you have need to store data in local storage simply use the utility provided in the utils folder.
+
+```ts
+import { SecureStorage } from '@/utils/secure-storage';
+const storage = SecureStorage.getInstance();
+
+storage.set('key', 'value');
+```
+
+It uses localStorage but encrypts the data stored so it cannot be accessed from the console.
+
+> NB: In your .env file for laravel set `MIX_APP_SECRET=my-secret-key` with a strong key.
+
+## Note
+
+-   This is not an SPA.
+-   You can use vuetify components in blade files

@@ -1,10 +1,14 @@
 {
-	"name": "laravel/laravel",
+	"name": "chinloyal/lavuet",
 	"type": "project",
-	"description": "The Laravel Framework.",
+	"description": "Laravel + Vue + TypeScript Starter Project",
 	"keywords": [
 		"framework",
-		"laravel"
+		"laravel",
+		"template",
+		"starter",
+		"typescript",
+		"vue"
 	],
 	"license": "MIT",
 	"require": {
