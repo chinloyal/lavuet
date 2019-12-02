@@ -1,19 +1,27 @@
 import '@babel/polyfill';
 import Vue from 'vue';
+import Vuex from 'vuex';
 import '@/plugins/axios';
 import vuetify from '@/plugins/vuetify';
-import App from '@/App.vue';
+import Dialog from '@/plugins/app-dialog';
+import components from '@/components';
 import store from '@/store';
 import Vuelidate from 'vuelidate';
 
 Vue.use(Vuelidate);
+Vue.use(Dialog);
 
 Vue.config.productionTip = false;
 
-const VueApp: any = Vue;
+window.Vue = Vue;
 
-new VueApp({
-	store,
+const VueApp: any = Vue;
+const app: Vue = new VueApp({
 	vuetify,
-	render: (h: any) => h(App),
-}).$mount('#app');
+	components,
+	store,
+});
+
+app.$mount('#app');
+
+Vuex.Store.prototype.$dialog = app.$dialog;

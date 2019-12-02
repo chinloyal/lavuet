@@ -1,15 +1,32 @@
 version: '3.7'
 
 services:
-    db:
-        image: mcr.microsoft.com/mssql/server:latest
-        container_name: mssql-bakery
-        environment:
-            ACCEPT_EULA: 'Y'
-            SA_PASSWORD: 'yourStrong(!)Password'
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin:4.8
+        container_name: phpmyadmin-demo
         ports:
-            - 1433:1433
+            - '8080:80'
+        environment:
+            - PMA_ARBITRARY=1
+        restart: always
+        links:
+            - db:mysql
+    db:
+        image: mysql:8
+        container_name: mysql-demo
+        command:
+            [
+                '--character-set-server=utf8mb4',
+                '--collation-server=utf8mb4_unicode_ci',
+                '--default-authentication-plugin=mysql_native_password',
+            ]
+        environment:
+            - MYSQL_USER=root
+            - MYSQL_PASSWORD=root
+            - MYSQL_DATABASE=demo
+            - MYSQL_ROOT_PASSWORD=root
+        ports:
+            - '3306:3306'
         restart: always
         volumes:
-            - ./data/sqlserver:/var/opt/sqlserver
-            - ./data/mssql:/var/opt/mssql
+            - ./data:/var/lib/mysql

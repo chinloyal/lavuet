@@ -22,25 +22,6 @@ function root(args) {
 
 mix.webpackConfig({
 	mode: process.env.NODE_ENV,
-	module: {
-		rules: [
-			{
-				test: /\.tsx?$/,
-				loader: 'ts-loader',
-				options: {
-					appendTsSuffixTo: [/\.vue$/],
-				},
-				exclude: /node_modules/,
-			},
-			{
-				test: /\.js$/i,
-				exclude: /node_modules/,
-				use: {
-					loader: 'babel-loader',
-				},
-			},
-		],
-	},
 	plugins: [new VuetifyLoaderPlugin()],
 	resolve: {
 		alias: {
@@ -54,6 +35,16 @@ mix.webpackConfig({
 	},
 });
 
-mix.ts('resources/js/app.ts', 'public/js')
-	.sass('resources/sass/app.scss', 'public/css')
-	.extract(['vue', 'vuetify', 'vuelidate']);
+mix.sass('resources/sass/app.scss', 'public/css');
+
+mix.ts('resources/js/app.ts', 'public/js').extract(['vue', 'vuelidate']);
+
+mix.copyDirectory('resources/img', 'public/img');
+
+if (mix.inProduction()) {
+	mix.sourceMaps();
+	mix.version();
+} else {
+	// Uncomment if needed
+	// mix.browserSync('http://localhost:8000');
+}

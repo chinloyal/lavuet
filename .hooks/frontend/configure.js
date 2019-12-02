@@ -1,3 +1,6 @@
+/*
+	Run from package.json preinstall script
+*/
 const log = require('../log');
 
 // Enforces the use of npm
