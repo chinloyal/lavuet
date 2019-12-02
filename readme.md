@@ -1,12 +1,16 @@
-# Laravel + Vue + TypeScript Starte Project (MPA)
+# Laravel + Vue + TypeScript Starter Project (MPA)
 
-> Start project template of full stack web development
+[![total downloads](https://poser.pugx.org/chinloyal/lavuet/d/total.svg)](https://packagist.org/packages/chinloyal/lavuet)
+[![latest stable version](https://poser.pugx.org/chinloyal/lavuet/v/stable.svg)](https://packagist.org/packages/chinloyal/lavuet)
+[![license](https://poser.pugx.org/chinloyal/lavuet/license.svg)](https://packagist.org/packages/chinloyal/lavuet)
+
+> Starter project template of full stack web development
 
 ## Demo
 
 > Screenshots of a demo application that uses this template
 
-The live demo can be found [here](http://addb-bakery.herokuapp.com)
+The live demo can be found [here](http://addb-bakery.herokuapp.com).
 The repo for the demo can be found [here](https://github.com/chinloyal/addb-bakery)
 
 ![Splash Page Screenshot](https://i.imgur.com/NLvWg5Y.png)
