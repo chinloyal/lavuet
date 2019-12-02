@@ -21,7 +21,7 @@ The repo for the demo can be found [here](https://github.com/chinloyal/addb-bake
 -   Vuetify (Material Design)
 -   Reusable dialog
 -   NProgress on axios request
--   Git Hooks
+-   Hooks
 -   Vuex (with secure storage)
 
 ## Installation
@@ -110,6 +110,13 @@ storage.set('key', 'value');
 It uses localStorage but encrypts the data stored so it cannot be accessed from the console.
 
 > NB: In your .env file for laravel set `MIX_APP_SECRET=my-secret-key` with a strong key.
+
+### Hooks
+
+Hooks allow you to enforce rules before you push, commit or even install a package.
+There are a few hooks prebuilt you can use in the `.hooks` folder. For example you can enforce the use of `npm` over `yarn` and vice versa in the configure.js file. Next simply run the hook from your package.json preinstall script by adding `"preinstall": "node .hooks/frontend/configure.js"`.
+
+Other things that can be enforced are branch names, how up to date the branch is with another branch and even linting.
 
 ## Note
 
