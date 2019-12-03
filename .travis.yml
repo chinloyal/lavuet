@@ -6,8 +6,7 @@ cache:
     directories:
         - $HOME/.composer/cache
         - $HOME/.npm
-        - MyApp/node_modules
-        - MyApp/vendor
+        - node_modules
 
 php:
     - 7.2
