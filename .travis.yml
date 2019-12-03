@@ -7,6 +7,7 @@ cache:
         - $HOME/.composer/cache
         - $HOME/.npm
         - node_modules
+        - vendor
 
 php:
     - 7.2
@@ -14,6 +15,7 @@ php:
 
 before_install:
     - composer create-project --prefer-dist chinloyal/lavuet MyApp
+    - npm i -g npm
 
 install:
     - cd MyApp

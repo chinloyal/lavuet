@@ -1,5 +1,6 @@
 # Laravel + Vue + TypeScript Starter Project (MPA)
 
+[![build status](https://travis-ci.org/chinloyal/lavuet.svg?branch=master)](https://travis-ci.org/chinloyal/lavuet)
 [![total downloads](https://poser.pugx.org/chinloyal/lavuet/d/total.svg)](https://packagist.org/packages/chinloyal/lavuet)
 [![latest stable version](https://poser.pugx.org/chinloyal/lavuet/v/stable.svg)](https://packagist.org/packages/chinloyal/lavuet)
 [![license](https://poser.pugx.org/chinloyal/lavuet/license.svg)](https://packagist.org/packages/chinloyal/lavuet)
