@@ -1,0 +1,26 @@
+sudo: false
+language: php
+dist: trusty
+
+cache:
+    directories:
+        - $HOME/.composer/cache
+        - $HOME/.npm
+        - node_modules
+
+php:
+    - 7.2
+    - 7.3
+
+before_install:
+    - composer create-project --prefer-dist chinloyal/lavuet MyApp
+
+install:
+    - cd MyApp
+    - npm install
+
+script:
+    - npm run dev
+
+notifications:
+    email: false
