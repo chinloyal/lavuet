@@ -36,6 +36,7 @@ The repo for the demo can be found [here](https://github.com/chinloyal/addb-bake
 $ composer create-project --prefer-dist chinloyal/lavuet ProjectName
 $ cd ProjectName
 $ npm install
+$ npm run dev
 ```
 
 > From github
@@ -45,6 +46,7 @@ $ git clone https://github.com/chinloyal/lavuet.git ProjectName
 $ cd ProjectName
 $ composer install
 $ npm install
+$ npm run dev
 $ cp .env.example .env
 $ php artisan key:generate
 ```

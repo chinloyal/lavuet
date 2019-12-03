@@ -36,13 +36,13 @@
 							<div class="links">
 								<a target="_blank" href="http://addb-bakery.herokuapp.com">Demo</a>
 								<a target="_blank" href="https://github.com/chinloyal/addb-bakery">Demo GitHub</a>
+								<a target="_blank" href="https://github.com/chinloyal/lavuet">Template GitHub</a>
 								<a target="_blank" href="https://laracasts.com">Laracasts</a>
 								<a target="_blank" href="https://laravel-news.com">News</a>
 								<a target="_blank" href="https://blog.laravel.com">Blog</a>
 								<a target="_blank" href="https://nova.laravel.com">Nova</a>
 								<a target="_blank" href="https://forge.laravel.com">Forge</a>
 								<a target="_blank" href="https://vapor.laravel.com">Vapor</a>
-								<a target="_blank" href="https://github.com/chinloyal/laravel-vue-typescript-starter-project">Template GitHub</a>
 							</div>
 						</v-flex>
 					</v-layout>
