@@ -14,7 +14,7 @@
 	"devDependencies": {
 		"@babel/polyfill": "^7.6.0",
 		"@mdi/font": "^4.5.95",
-		"@types/node": "^12.11.1",
+		"@types/node": "^13.5.3",
 		"@types/nprogress": "^0.2.0",
 		"@types/vuelidate": "^0.7.7",
 		"@vue/cli-plugin-babel": "^4.0.3",
