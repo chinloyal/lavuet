@@ -8,7 +8,9 @@ import components from '@/components';
 import store from '@/store';
 import Vuelidate from 'vuelidate';
 
-Vue.use(Vuelidate);
+const VuelidatePlugin: any = Vuelidate;
+
+Vue.use(VuelidatePlugin);
 Vue.use(Dialog);
 
 Vue.config.productionTip = false;
