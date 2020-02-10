@@ -14,7 +14,7 @@ php:
 
 before_install:
     - composer create-project --prefer-dist chinloyal/lavuet MyApp
-    - nvm install 10.15
+    - nvm install 13.7
     - npm i -g npm
 
 install:
