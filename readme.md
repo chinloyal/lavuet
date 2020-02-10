@@ -20,7 +20,7 @@ The repo for the demo can be found [here](https://github.com/chinloyal/addb-bake
 
 ## Features
 
--   Laravel 6.6
+-   Laravel 6.x
 -   Vue.js 2.5
 -   TypeScript
 -   Vuetify (Material Design)
@@ -28,6 +28,7 @@ The repo for the demo can be found [here](https://github.com/chinloyal/addb-bake
 -   NProgress on axios request
 -   Hooks
 -   Vuex (with secure storage)
+-   Vuelidate
 
 ## Installation
 
