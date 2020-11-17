@@ -12,7 +12,7 @@
 		"lint": "vue-cli-service lint --fix"
 	},
 	"devDependencies": {
-		"@babel/polyfill": "^7.6.0",
+		"@babel/polyfill": "^7.12.1",
 		"@mdi/font": "^4.5.95",
 		"@types/node": "^13.7.0",
 		"@types/nprogress": "^0.2.0",
