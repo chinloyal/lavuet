@@ -56,7 +56,7 @@
 		"vue-style-loader": "^4.1.2",
 		"vue-template-compiler": "^2.6.11",
 		"webpack": "^4.44.2",
-		"webpack-cli": "^3.3.10"
+		"webpack-cli": "^4.5.0"
 	},
 	"dependencies": {
 		"nprogress": "^0.2.0",
