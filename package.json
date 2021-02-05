@@ -46,7 +46,7 @@
 		"sass": "^1.29.0",
 		"sass-loader": "7.*",
 		"style-loader": "^1.0.0",
-		"ts-loader": "^6.2.1",
+		"ts-loader": "^8.0.15",
 		"tslint-microsoft-contrib": "^6.2.0",
 		"typescript": "^3.9.7",
 		"vue": "^2.6.11",
