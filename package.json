@@ -35,7 +35,7 @@
 		"husky": "^4.2.1",
 		"jquery": "^3.5",
 		"laravel-mix": "^5.0.9",
-		"lodash": "^4.17.20",
+		"lodash": "^4.17.21",
 		"mini-css-extract-plugin": "^0.8.0",
 		"node-emoji": "^1.10.0",
 		"popper.js": "^1.16",
